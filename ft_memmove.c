@@ -1,37 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 14:17:12 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/25 12:30:46 by nbulbul          ###   ########.fr       */
+/*   Created: 2026/01/25 15:07:26 by nbulbul           #+#    #+#             */
+/*   Updated: 2026/01/25 15:07:27 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
-void *ft_memset(void *s, int c, size_t n)
-{
-    size_t i;
-    i = 0;
-    
-    unsigned char *temp;
-    temp = (unsigned char *)s;
-    
-    while (i < n)
-    {
-        temp[i] = c;
-        i++;
-    }
-    return (s);
-}
-
-int main()
-{
-    char arr[] = "hello";
-    ft_memset(arr, '2', 3);
-    printf("%s" ,arr);
-}

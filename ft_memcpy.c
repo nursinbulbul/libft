@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 14:17:12 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/25 12:30:46 by nbulbul          ###   ########.fr       */
+/*   Created: 2026/01/25 12:53:13 by nbulbul           #+#    #+#             */
+/*   Updated: 2026/01/25 13:12:28 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <bsd/string.h>
 #include <stdio.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     size_t i;
     i = 0;
     
-    unsigned char *temp;
-    temp = (unsigned char *)s;
+    const unsigned char *temp;
+    temp = src;
+    unsigned char *temp2;
+    temp2 = dest;
     
     while (i < n)
     {
-        temp[i] = c;
+        temp2[i] = temp[i];
         i++;
+        
     }
-    return (s);
+    
+    return((void *)dest);
 }
 
 int main()
 {
-    char arr[] = "hello";
-    ft_memset(arr, '2', 3);
-    printf("%s" ,arr);
+    char dst[] = "bulbul";
+    char sorc[] = "nursin";
+    ft_memcpy(dst, sorc, 3);
+    printf("%s" , dst);
 }
