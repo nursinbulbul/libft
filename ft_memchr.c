@@ -1,50 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 15:07:26 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/28 16:51:12 by nbulbul          ###   ########.fr       */
+/*   Created: 2026/01/28 16:55:18 by nbulbul           #+#    #+#             */
+/*   Updated: 2026/01/28 17:11:54 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
     size_t i;
     i = 0;
+    unsigned const char *temp;
+    temp = s;
     
-    unsigned char *dst;
-    const unsigned char *sorc;
-    dst = dest;
-    sorc = src;
-
-    if (dest < src)
+    while (n > i)
     {
-        while (i < n)
+        if (temp[i] == c)
         {
-            dst[i] = sorc[i];
-            i++;
+            return((void *)&temp[i]);
         }
+        i++;
     }
-    else
-    {
-        while (n > 0)
-        {
-            dst[n - 1] = sorc[n -1];
-            n--;
-        }
-    }
-    return(dest);   
+    return(NULL);
 }
-
 int main()
 {
     char arr[] = "nursin";
-    char arr2[] = "nurbulbul";
-    ft_memmove(arr2 + 1, arr2, 6);
-    printf("%s",arr2);
+    printf("%s" , ft_memchr(arr, 'i', 3));
 }

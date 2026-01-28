@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 12:53:13 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/28 16:35:45 by nbulbul          ###   ########.fr       */
+/*   Created: 2026/01/28 19:37:07 by nbulbul           #+#    #+#             */
+/*   Updated: 2026/01/28 19:48:30 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
 #include <stdio.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+char *ft_strdup(const char *s)
 {
+    size_t len;
     size_t i;
     i = 0;
-    
-    const unsigned char *temp;
-    temp = src;
-    unsigned char *temp2;
-    temp2 = dest;
-    
-    while (i < n)
-    {
-        temp2[i] = temp[i];
-        i++;
-        
-    }
-    
-    return((void *)dest);
-}
+    len = 0;
+    if (s == NULL)
+    return(NULL);
 
-int main()
-{
-    char dst[] = "bulbul";
-    char sorc[] = "nurbulbul";
-    ft_memcpy(dst + 1, dst, 9);
-    printf("%s" , dst);
+    while (s[len] != '\0')
+    len++;
+    
+    char *p = malloc(len + 1);
+    if (p == NULL)
+    return(NULL);
+
+    while (i < len)
+    {
+        p[i] = s[i];
+        i++;
+    }
+    p[i] = '\0';
+    return (p);
 }
