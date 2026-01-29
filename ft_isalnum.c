@@ -6,12 +6,13 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 15:47:00 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/23 15:52:07 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/01/29 13:59:24 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-int ft_isalnum(int c){
+int ft_isalnum(int c)
+{
     if (((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) 
             || ((c >= 48) && (c <= 57))){
                 return (1);
