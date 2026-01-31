@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 14:28:56 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/25 14:38:47 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/01/31 12:27:03 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int ft_atoi(const char *nptr)
     {
         n++;
     }
-    while (nptr[n] == '+' || nptr[n] == '-')
+    if (nptr[n] == '+' || nptr[n] == '-')
     {
         if (nptr[n] == '-')
         {

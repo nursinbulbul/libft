@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 19:37:07 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/31 13:19:55 by nbulbul          ###   ########.fr       */
+/*   Created: 2026/01/31 15:59:25 by nbulbul           #+#    #+#             */
+/*   Updated: 2026/01/31 18:18:11 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include <stdlib.h>
 
-char *ft_strdup(const char *s)
+t_list *ft_lstnew(void *content)
 {
-    size_t len;
-    size_t i;
-    i = 0;
-    len = 0;
-    if (s == NULL)
-    return(NULL);
-
-    while (s[len] != '\0')
-    len++;
+    struct t_list *newlist;
+    newlist = (t_list *)malloc(sizeof(struct t_list));
+    if(!newlist)
+        return(NULL);
     
-    char *p;
-    p = (char *)malloc(len + 1);
-    if (p == NULL)
-    return(NULL);
-
-    while (i < len)
-    {
-        p[i] = s[i];
-        i++;
-    }
-    p[i] = '\0';
-    return (p);
+    newlist->content = content;
+    newlist->next = NULL;
+    return(newlist);
 }

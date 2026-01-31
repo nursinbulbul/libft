@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 13:58:29 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/29 15:05:45 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/01/31 15:58:50 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,10 @@ char *ft_strrchr(const char *s, int c);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 int ft_tolower(int c);
 int ft_toupper(int c);
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
+
 #endif
