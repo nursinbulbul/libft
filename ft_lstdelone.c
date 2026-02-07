@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 11:56:41 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/07 11:56:42 by nbulbul          ###   ########.fr       */
+/*   Created: 2026/02/07 12:03:16 by nbulbul           #+#    #+#             */
+/*   Updated: 2026/02/07 12:14:41 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <unistd.h>
-
-void ft_putchar_fd(char c, int fd)
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    write(fd, &c, 1);
+    if (!lst || !del)
+    {
+        return;
+    }
+    del(lst->content);
+    free(lst);
 }

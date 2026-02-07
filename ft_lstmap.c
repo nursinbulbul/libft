@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 11:57:01 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/07 11:57:02 by nbulbul          ###   ########.fr       */
+/*   Created: 2026/02/07 13:19:11 by nbulbul           #+#    #+#             */
+/*   Updated: 2026/02/07 14:16:08 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <unistd.h>
-
-void ft_putnbr_fd(int n, int fd)
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    char c;
+    t_list *newlst;
 
-    if (n == -2147483648)
+    if (!lst || !f || !del)
     {
-        write(fd, "-2147483648", 11);
-        return;
-    }
-
-    if (n < 0)
-    {
-        write(fd, "-", 1);
-        n *= -1;
+        return(NULL);
     }
     
-    if (n >= 10)
+    while (lst)
     {
-        ft_putnbr_fd(n / 10, fd);
+        ft_lstnew(f(newlst->content));
+        if (!newlst)
+        {
+            ft_lstclear(&newlst, del);
+            newlst = NULL;
+        }
+        ft_lstadd_back(&newlst,newlst);
+        lst = lst->next;
     }
-    n = n % 10;
-    c = n + '0';
-    write(fd, &c, 1);
+    
+    return(newlst);
 }
