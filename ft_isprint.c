@@ -6,11 +6,12 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:15:28 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/23 16:26:19 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/07 17:19:23 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 int ft_isprint(int c)
 {
     if ((c >= 32 && c <= 126))
@@ -22,5 +23,7 @@ int ft_isprint(int c)
 
 int main()
 {
-    printf("%d", ft_isprint('n'));
+    printf("%d\n", ft_isprint('n'));
+        printf("%d", isprint('n'));
+
 }

@@ -6,11 +6,12 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 15:47:00 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/29 13:59:24 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/07 17:13:10 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 int ft_isalnum(int c)
 {
     if (((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) 
@@ -21,5 +22,7 @@ int ft_isalnum(int c)
 }
 
 int main(){
-    printf("%d", ft_isalnum(' '));
+    printf("%d\n", ft_isalnum(' '));
+        printf("%d", isalnum(' '));
+
 }

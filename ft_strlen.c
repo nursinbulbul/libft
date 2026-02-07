@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:35:09 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/29 14:40:29 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/07 17:25:45 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ size_t ft_strlen(const char *s)
 
 /*int main() 
 {
-    char str[] = "nursinbulbul"; 
-    printf("%zu", ft_strlen(str));  
+    char str[] = "dfgwersdfe"; 
+    printf("%zu\n", ft_strlen(str));  
+        printf("%zu", strlen(str));  
+
 }*/
