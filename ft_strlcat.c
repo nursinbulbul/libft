@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 18:41:54 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/24 10:54:26 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 14:57:41 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ int main()
     char sorc[] = "bulbulbul";
     printf("%zu" , ft_strlcat(dest, sorc, 6));
     printf("%s\n" , dest);
+    
 }

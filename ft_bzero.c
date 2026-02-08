@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 12:46:57 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/07 19:44:51 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 17:15:55 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void ft_bzero(void *s, size_t n)
         i++;
     }
 }
-int main()
+/*int main()
 {
     char arr[] = "hello";
     ft_bzero(arr, 3);
@@ -35,4 +35,4 @@ int main()
     char arr2[] = "hello";
     ft_bzero(arr2, 3);
     printf("%s" ,arr2);
-}
+}*/

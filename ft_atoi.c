@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 14:28:56 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/31 12:27:03 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 16:05:46 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int ft_atoi(const char *nptr)
 
 int main()
 {
-    char arr[] = "450";
-    printf("%d" , ft_atoi(arr));
+    char arr[] = "-450";
+    printf("%d\n" , ft_atoi(arr));
+    printf("%d" , atoi(arr));
 }

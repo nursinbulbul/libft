@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 16:55:18 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/28 17:11:54 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 15:43:01 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ void *ft_memchr(const void *s, int c, size_t n)
 int main()
 {
     char arr[] = "nursin";
-    printf("%s" , ft_memchr(arr, 'i', 3));
+    printf("%s" , ft_memchr(arr, 'i', 6));
+    char arr2[] = "nursin";
+    printf("%s\n" , memchr(arr2, 'i', 6));
 }

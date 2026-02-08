@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:58:51 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/24 13:06:42 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 15:25:23 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,8 @@ int main()
 {
     char str1[] = "nur";
     char str2[] = "nursin";
-    printf("%d" , ft_strncmp(str1, str2, 4));
+    printf("%d\n" , ft_strncmp(str1, str2, 3));
+    char str12[] = "nur";
+    char str22[] = "nursin";
+    printf("%d" , strncmp(str12, str22, 3));
 }

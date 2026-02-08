@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 12:53:13 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/28 16:35:45 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 14:08:12 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,23 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
         
     }
     
-    return((void *)dest);
+    return(dest);
 }
 
 int main()
 {
-    char dst[] = "bulbul";
-    char sorc[] = "nurbulbul";
-    ft_memcpy(dst + 1, dst, 9);
-    printf("%s" , dst);
+      int arr[] = {1,2,3,4};
+    int arr2[] = {5,287,7,8};
+    ft_memcpy(arr + 1, arr, 5);
+    printf("%d\n",arr[0]);
+    printf("%d\n",arr[1]);
+    printf("%d\n",arr[2]);
+    printf("%d\n",arr[3]);
+    int arr3[] = {1,2,3,4};
+    int arr4[] = {5,287,7,8};
+    memcpy(arr3 + 1, arr3, 5);
+    printf("%d\n",arr3[0]);
+    printf("%d\n",arr3[1]);
+    printf("%d\n",arr3[2]);
+    printf("%d\n",arr3[3]);
 }

@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 13:07:10 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/24 14:05:16 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 16:02:03 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
         while (big[i] != '\0' && i < len)
         {
             n = 0;
-            while (big[n + i] == little[n] && little[n] != '\0')
+            while (big[n + i] == little[n] && little[n] != '\0' && n + i < len)
             {
                 n++;
             }
@@ -45,6 +45,6 @@ int main()
 {
     char bigs[] = "bulbulnursinllll";
     char littles[] = "nursin";
-    printf("%s" , ft_strnstr(bigs, littles,12));
-    //printf("\n%p" , &bigs[6]);
+    printf("%s" , ft_strnstr(bigs, littles,10));
+
 }

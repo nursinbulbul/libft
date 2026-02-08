@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:10:49 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/31 13:06:21 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 15:03:08 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ char *ft_strchr(const char *s, int c)
 }
 /*int main()
 {
-    char str[] = "nbu";
-    printf("%s\n" , ft_strchr(str, 'b'));
-    printf("%s" , strchr(str, 'b'));
+    char str[] = "nursin";
+    printf("%s\n" , ft_strchr(str, 's'));
+    printf("%s" , strchr(str, 's'));
 
 }*/

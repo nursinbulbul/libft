@@ -6,11 +6,12 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 15:07:26 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/28 16:51:12 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 14:05:59 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -43,8 +44,18 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 
 int main()
 {
-    char arr[] = "nursin";
-    char arr2[] = "nurbulbul";
-    ft_memmove(arr2 + 1, arr2, 6);
-    printf("%s",arr2);
+    int arr[] = {1,2,3,4};
+    int arr2[] = {5,287,7,8};
+    ft_memmove(arr, arr2, 5);
+    printf("%d\n",arr[0]);
+    printf("%d\n",arr[1]);
+    printf("%d\n",arr[2]);
+    printf("%d\n",arr[3]);
+    int arr3[] = {1,2,3,4};
+    int arr4[] = {5,287,7,8};
+    memmove(arr3, arr4, 5);
+    printf("%d\n",arr3[0]);
+    printf("%d\n",arr3[1]);
+    printf("%d\n",arr3[2]);
+    printf("%d\n",arr3[3]);
 }

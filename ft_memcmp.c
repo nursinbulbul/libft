@@ -6,11 +6,12 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 13:21:56 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/25 13:37:50 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 15:55:11 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -41,8 +42,13 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int main()
 {
-    char arr[] = {'1', '2', '3', '5'};
-    char arr2[] = {'1', '2', '3', '4'};
+    int arr[] = {1,2,3,4};
+    int arr2[] = {1,2,3,5};
     
-    printf("%d" , ft_memcmp(arr, arr2, 4));
+    printf("%d\n" , ft_memcmp(arr, arr2, 6));
+
+    int arr3[] = {1,2,3,4};
+    int arr4[] = {1,2,3,5};
+    
+    printf("%d" , memcmp(arr3, arr4, 6));
 }
