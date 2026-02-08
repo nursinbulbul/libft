@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 17:20:31 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/08 17:19:42 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 18:55:50 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void *ft_calloc(size_t nmemb, size_t size)
     return (NULL); 
     
     unsigned char *p;
-    p = (unsigned char *)malloc(sizeof(nmemb * size));
+    p = (unsigned char *)malloc(nmemb * size);
     
     if (p == NULL)
     return(NULL);
@@ -40,10 +40,11 @@ void *ft_calloc(size_t nmemb, size_t size)
         p[i] = 0;
         i++;
     }bzero yerine burdaki gibi döngü ile de yapılabilir*/
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     char *ptr = ft_calloc(3, 1);
     ptr = "123";
     printf("%s", ptr);
-}
+    free(ptr);
+}*/

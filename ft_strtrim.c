@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 19:10:50 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/31 13:08:01 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 18:48:05 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,23 @@ char *ft_strtrim(char const *s1, char const *set)
     size_t n;
     size_t j;
     i = 0;
-    n = ft_strlen(s1);
     j = 0;
     if (!s1 || !set)
     return(NULL);
+    n = ft_strlen(s1);
     
     while (s1[i] != '\0' && ft_strchr(set, s1[i]))
         i++;
-    while (s1[n] != s1[i] && !ft_strchr(set, s1[n]))
+    while (n != i && ft_strchr(set, s1[n - 1]))
         n--;
     
     char *trimmed;
-    trimmed = (char *)malloc(sizeof((n - i) + 1));
+    trimmed = (char *)malloc((n - i) + 1);
     
     if (!trimmed)
     return(NULL);
     
-    while (i != n)
+    while (i < n)
     {
         trimmed[j] = s1[i];
         j++;
@@ -48,7 +48,7 @@ char *ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int main()
 {
-    char const arr[] = "nursinbulbul";
+    char const arr[] = "nursinbulbu";
     char const arr2[] = "nbu";
     printf("%s" , ft_strtrim(arr, arr2));
 }

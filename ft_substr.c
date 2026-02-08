@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 13:00:29 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/29 20:00:13 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/08 18:56:05 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     len = ft_strlen(s) - start;
     
     char *substring;
-    substring = (char *)malloc(sizeof(len + 1));
+    substring = (char *)malloc(len + 1);
     
     if ((!substring) || (!s) || (start > ft_strlen(s)))
     return NULL;
@@ -40,9 +40,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     
 }
 
-int main()
+/*int main()
 {
     char const arr[] = "nursinbulbul";
     
     printf("%s" ,ft_substr(arr, 3, 6));
-}
+    
+}*/
