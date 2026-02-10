@@ -15,12 +15,20 @@
 
 t_list *ft_lstnew(void *content)
 {
-    struct t_list *newlist;
-    newlist = (t_list *)malloc(sizeof(struct t_list));
+    t_list *newlist;
+    newlist = (t_list *)malloc(sizeof(t_list));
     if(!newlist)
         return(NULL);
     
     newlist->content = content;
     newlist->next = NULL;
     return(newlist);
+}
+#include <stdio.h>
+int main()
+{
+    t_list *head;
+    head = ft_lstnew("nursin");
+
+    printf("%s\n", (char *)head->content);
 }

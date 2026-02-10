@@ -22,14 +22,13 @@ int slong(int n)
 {
     int i;
     i = 0;
+    if (n == 0)
+        return (1);
     if (sign(n))
     {
         n *= -1; 
         i++;
     }
-    if (n == 0)
-        return (1);
-    
     while (n > 0)
     {
         n = n / 10;

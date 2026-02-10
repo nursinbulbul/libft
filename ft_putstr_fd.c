@@ -28,3 +28,15 @@ void ft_putstr_fd(char *s, int fd)
     }
     
 }
+#include <fcntl.h>
+int main()
+{
+    int fd;
+
+    fd = open("test2.txt" , O_WRONLY | O_CREAT | O_TRUNC, 0777);
+
+    char arr[] = "hello from nursin";
+
+    ft_putstr_fd(arr, fd);
+    close(fd);
+}

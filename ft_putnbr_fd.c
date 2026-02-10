@@ -37,3 +37,16 @@ void ft_putnbr_fd(int n, int fd)
     c = n + '0';
     write(fd, &c, 1);
 }
+#include <fcntl.h>
+int main()
+{
+    int fd;
+
+    fd = open("test4.txt" , O_WRONLY | O_CREAT | O_TRUNC, 0777);
+
+    int n;
+    n = 2147483648;
+
+    ft_putnbr_fd(n, fd);
+    close(fd);
+}

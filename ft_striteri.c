@@ -10,7 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
+void lower(unsigned int n, char *c)
+{
+    if ((n % 2 != 00) && *c >= 'A' && *c <= 'Z')
+    {
+        *c += 32;
+    }
+    return;
+}
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     unsigned int n;
@@ -25,4 +32,11 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
         n++;
     }
     
+}
+#include <stdio.h>
+int main()
+{
+    char s[] = "NURSIN";
+    ft_striteri(s, lower);
+    printf("%s\n", s);
 }

@@ -29,3 +29,14 @@ void ft_putendl_fd(char *s, int fd)
     write(fd, "\n", 1);
 
 }
+#include <fcntl.h>
+int main()
+{
+    int fd;
+
+    fd = open("test3.txt", O_WRONLY | O_CREAT | O_TRUNC, 0777);
+
+    char arr[] = "how you doin'";
+    ft_putendl_fd(arr, fd);
+    close(fd);
+}

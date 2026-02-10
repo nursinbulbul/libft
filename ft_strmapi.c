@@ -14,6 +14,14 @@
 #include "libft.h"
 #include <stdlib.h>
 
+char upper(unsigned int n, char c)
+{
+   if ((n % 2 == 0) && c >= 92 && c<= 122)
+   {
+      return(c - 32);
+   }
+   return (c);
+}
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
    unsigned int n;
@@ -40,4 +48,12 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
    newstr[n] = '\0';
 
    return(newstr);
+}
+#include <stdio.h>
+int main()
+{
+   char const *s = "nursin";
+   char *result = ft_strmapi(s, upper);
+   printf("%s\n" , result);
+   free(result);
 }
