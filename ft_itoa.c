@@ -6,19 +6,19 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:09:31 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/07 14:36:34 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/11 18:11:09 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int sign(int n)
+static int sign(int n)
 {
     if (n < 0)
         return(1);
     return(0);  
 }
-int slong(int n)
+static int slong(int n)
 {
     int i;
     i = 0;
