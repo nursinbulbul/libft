@@ -6,54 +6,30 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 11:57:59 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/07 11:58:00 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/11 18:57:21 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-#include <stdlib.h>
 
-char upper(unsigned int n, char c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-   if ((n % 2 == 0) && c >= 92 && c<= 122)
-   {
-      return(c - 32);
-   }
-   return (c);
-}
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
-   unsigned int n;
-   size_t i;
-   
-   n = 0;
+	unsigned int	n;
+	size_t			i;
+	char			*newstr;
 
-   if (!s || !f)
-   return (NULL);
-   
-   i = ft_strlen(s);
-
-   char *newstr;
-   newstr = malloc(i + 1);
-
-   if(!newstr)
-   return(NULL);
-
-   while (n < i)
-   {
-    newstr[n] = f(n, s[n]);
-    n++;
-   }
-   newstr[n] = '\0';
-
-   return(newstr);
-}
-#include <stdio.h>
-int main()
-{
-   char const *s = "nursin";
-   char *result = ft_strmapi(s, upper);
-   printf("%s\n" , result);
-   free(result);
+	n = 0;
+	if (!s || !f)
+		return (NULL);
+	i = ft_strlen(s);
+	newstr = malloc(i + 1);
+	if (!newstr)
+		return (NULL);
+	while (n < i)
+	{
+		newstr[n] = f(n, s[n]);
+		n++;
+	}
+	newstr[n] = '\0';
+	return (newstr);
 }

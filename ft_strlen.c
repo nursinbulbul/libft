@@ -6,27 +6,20 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:35:09 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/07 17:25:45 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/11 18:42:19 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-size_t ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-    int i;
-    i = 0;
-    while(s[i] != '\0')
-    {
-        i++;
-    }    
-    return (i);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
-
-/*int main() 
-{
-    char str[] = "dfgwersdfe"; 
-    printf("%zu\n", ft_strlen(str));  
-        printf("%zu", strlen(str));  
-
-}*/
