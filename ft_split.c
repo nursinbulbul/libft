@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 13:51:17 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/08 19:06:46 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/11 15:49:14 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,4 +108,8 @@ int main()
     printf("%s\n" , c[2]);
     printf("%s\n" , c[3]);
     free(c);
+    free(c[0]);
+    free(c[1]);
+    free(c[2]);
+    free(c[3]);
 }

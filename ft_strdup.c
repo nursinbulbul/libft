@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 19:37:07 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/08 17:24:54 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/11 14:51:46 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ char *ft_strdup(const char *s)
     return (p);
 }
 
-int main()
-{
-    char const arr[] = "nursinbulbul";
-    char *a;
-    a = ft_strdup(arr);
-    printf("%s\n", a);
-    printf("%p\n", arr);
-    printf("%p\n", a);
-}
+// int main()
+// {
+//     char const arr[] = "nursinbulbul";
+//     char *a;
+//     a = ft_strdup(arr);
+//     printf("%s\n", a);
+//     printf("%p\n", arr);
+//     printf("%p\n", a);
+// }

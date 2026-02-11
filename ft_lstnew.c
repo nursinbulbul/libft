@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:59:25 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/01/31 18:18:11 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/11 14:51:31 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ t_list *ft_lstnew(void *content)
     newlist->next = NULL;
     return(newlist);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     t_list *head;
     head = ft_lstnew("nursin");
 
     printf("%s\n", (char *)head->content);
-}
+}*/
