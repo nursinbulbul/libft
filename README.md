@@ -106,7 +106,7 @@ Bu fonksiyonlar sayesinde liste oluşturma, başa/sona eleman ekleme, liste uzun
 
 ---
 
-## Derleme Talimatları
+## Talimatlar
 
 Projeyi derlemek için:
 
@@ -279,7 +279,7 @@ These functions allow creation, manipulation, iteration, and deletion of linked 
 
 ---
 
-## Compilation Instructions
+## Instructions
 
 To compile the library:
 
