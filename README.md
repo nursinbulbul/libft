@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by nbulbul.*
+*Bu proje, 42 müfredatının bir parçası olarak nbulbul tarafından oluşturulmuştur.*
 
 # Libft
 # TR
@@ -179,6 +179,9 @@ AI aşağıdaki amaçlarla kullanılmıştır:
 * Edge-case durumlarını kontrol etmek
 
 Tüm implementasyonlar tarafımdan yazılmış ve mantığı anlaşılmıştır.
+
+
+*This project has been created as part of the 42 curriculum by nbulbul.*
 
 # ENG
 ## Description
