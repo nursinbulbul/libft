@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 16:55:18 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:48:31 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/12 17:36:26 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	temp = s;
 	while (n > i)
 	{
-		if (temp[i] == c)
+		if (temp[i] == (unsigned char)c)
 		{
 			return ((void *)&temp[i]);
 		}

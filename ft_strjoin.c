@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 13:27:47 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:53:39 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/12 17:36:32 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = ft_strlen(s1);
 	n = ft_strlen(s2);
 	len = 0;
-	newstring = (char *)malloc(i + n);
+	newstring = (char *)malloc(i + n + 1);
 	if (!newstring)
 		return (NULL);
 	while (s1[len] != '\0')

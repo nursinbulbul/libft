@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 16:59:51 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:59:43 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/12 17:36:24 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_lstsize(t_list *lst)
 
 	n = 0;
 	if (lst == NULL)
-		return (1);
+		return (0);
 	while (lst != NULL)
 	{
 		n++;

@@ -6,20 +6,20 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:09:31 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 19:04:26 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/12 17:36:16 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	sign(int n)
+static int	sign(long n)
 {
 	if (n < 0)
 		return (1);
 	return (0);
 }
 
-static int	slong(int n)
+static int	slong(long n)
 {
 	int	i;
 
@@ -41,28 +41,27 @@ static int	slong(int n)
 
 char	*ft_itoa(int n)
 {
+	long	nb;
 	int		i;
-	int		j;
 	char	*num;
 
-	j = 0;
-	i = slong(n);
+	nb = n;
+	i = slong(nb);
 	num = (char *)malloc(i + 1);
 	if (!num)
 		return (NULL);
-	if (n == 0)
-		num[0] = '0';
-	if (n < 0)
-	{
-		num[j] = '-';
-		j++;
-		n *= -1;
-	}
 	num[i] = '\0';
-	while (j < i)
+	if (nb == 0)
+		num[0] = '0';
+	if (nb < 0)
 	{
-		num[i - 1] = (n % 10) + '0';
-		n = n / 10;
+		num[0] = '-';
+		nb *= -1;
+	}
+	while (i > sign((long)n))
+	{
+		num[i - 1] = (nb % 10) + '0';
+		nb = nb / 10;
 		i--;
 	}
 	return (num);

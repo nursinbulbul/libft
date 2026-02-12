@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 13:00:29 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:52:47 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/12 17:36:41 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*substring;
 	unsigned int	i;
 
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
 	if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
 	substring = (char *)malloc(len + 1);
-	if ((!substring) || (!s) || (start > ft_strlen(s)))
+	if ((!substring) || (!s))
 		return (NULL);
 	i = 0;
 	while (i < len)
