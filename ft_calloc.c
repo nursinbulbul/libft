@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 17:20:31 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:51:34 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/14 12:59:06 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			i;
 	unsigned char	*p;
 
-	i = 0;
 	if (nmemb == 0 || size == 0)
 		return (malloc(1));
 	if (nmemb > SIZE_MAX / size)

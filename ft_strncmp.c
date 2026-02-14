@@ -6,7 +6,7 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:58:51 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:48:13 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/14 12:49:14 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (s1[i] != s2[i])
 		{
-			return (s1[i] - s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		}
 		i++;
 	}
