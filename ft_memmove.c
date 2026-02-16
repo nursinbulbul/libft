@@ -6,11 +6,11 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 15:07:26 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:45:08 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/16 14:34:33 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

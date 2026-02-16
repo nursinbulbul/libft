@@ -6,11 +6,11 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:09:31 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/12 17:36:16 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/16 14:33:21 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static int	sign(long n)
 {

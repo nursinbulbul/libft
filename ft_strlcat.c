@@ -6,11 +6,11 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 18:41:54 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/12 17:37:03 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/16 14:35:33 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

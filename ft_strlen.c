@@ -6,11 +6,11 @@
 /*   By: nbulbul <nbulbul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:35:09 by nbulbul           #+#    #+#             */
-/*   Updated: 2026/02/11 18:42:19 by nbulbul          ###   ########.fr       */
+/*   Updated: 2026/02/16 14:35:54 by nbulbul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {
